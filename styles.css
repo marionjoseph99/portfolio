@@ -1,0 +1,449 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to right, #e0e0e0, #f8f8f8); /* Soft modern gradient */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    margin: 20px;
+    width: 20%;
+    height: 95vh; /* Make it full height */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Keeps it floating */
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-y: auto; /* Allow scrolling inside the sidebar if needed */
+    
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Added soft shadow */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+/* Content Section Styles */
+.content {
+    width: 80%;
+    padding: 20px;
+    margin-left: 20%; /* Pushes content to the right, accounting for the fixed sidebar */
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.details {
+    margin-top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: #3a3a3a;
+}
+.description {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #3a3a3a;
+}
+.details1 {
+    margin-top: 14px;
+}
+
+.expertise {
+    margin-top: 14px;
+    color: #3a3a3a;
+}
+.expertise1 {
+    margin-top: 7px;
+}
+
+.fulldets { 
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+p {
+    font-size: 13px;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Social Buttons */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #3a3a3a; /* Darker text for readability */
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* CV Button */
+.cv-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #3a3a3a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.3s;
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.cv-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+
+
+.email-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #3a3a3a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.3s;
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+.email-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* Works Section */
+.works-section {
+    margin: 20px;
+    width: 75%; /* Reduce width to allow space for the sidebar */
+    min-height: 116vh; /* Ensures at least full-screen height, but grows with content */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-left: 22%; /* Push to the right so it doesn’t cover the sidebar */
+    position: relative;
+}
+
+/* Heading Style */
+.works-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a3a3a; /* Dark gray for a modern feel */
+    margin-bottom: 5px; /* Reduced space below heading */
+}
+
+/* Description Style */
+.works-description {
+    font-size: 14px;
+    color: #3a3a3a;
+    margin-bottom: 10px; /* Reduced space below description */
+}
+
+/* Work Buttons Grid */
+.work-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures max 4 buttons per row */
+    gap: 10px; /* Adjusted spacing between buttons */
+    justify-content: center;
+    max-width: 100%; /* Ensures it spans full width */
+    margin: 0 auto;
+}
+
+/* Styling for the project button */
+.project-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #3a3a3a; /* Dark text for readability */
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    word-wrap: break-word; /* Ensures text breaks properly */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect */
+.project-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Project title inside the button */
+.project-title {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    max-width: 90%;
+}
+
+/* Project description inside the button */
+.project-desc {
+    font-size: 12px;
+    color: #3a3a3a;
+    text-align: left;
+    max-width: 90%;
+    white-space: normal; /* Allows description to wrap */
+    overflow: hidden;
+}
+
+/* Responsive: 2 buttons per row on medium screens */
+@media (max-width: 1024px) {
+    .work-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 button per row on smaller screens */
+@media (max-width: 600px) {
+    .work-group {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.works-heading2, .works-heading3, .works-heading4 {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    color: #3a3a3a;
+}
+
+
+/* Watercolor Paintings Section */
+.watercolor-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Max 4 images per row */
+    gap: 10px; /* Spacing between images */
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Styling for watercolor images */
+.watercolor-section img {
+    width: 100%;
+    height: 250px; /* Set uniform height */
+    object-fit: cover; /* Ensures images are properly cropped */
+    border-radius: 12px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect for watercolor images */
+.watercolor-section img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Responsive: 2 images per row on medium screens */
+@media (max-width: 1024px) {
+    .watercolor-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 image per row on smaller screens */
+@media (max-width: 600px) {
+    .watercolor-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.education-title {
+    margin-top: 10px;
+    color: #3a3a3a;
+}
+
+.education-buttons {
+    margin-top: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+
+}
+
+.education-buttons button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #3a3a3a;
+    font-size: 13px;
+    font-weight: light;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.education-buttons button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+.skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+
+.skills-buttons {
+    margin-top: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: space-between;
+}
+
+.skills-buttons button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #3a3a3a;
+    font-size: 13px;
+    font-weight: light;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-buttons button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 50%;
+}
+
+
+
+
+
+
+
+
